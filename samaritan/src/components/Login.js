@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const Login = () => (
   <div>
@@ -8,3 +8,5 @@ export const Login = () => (
   <p>This is a test to see if this will display on the page</p>
   </div>
   )
+
+  export default Login;

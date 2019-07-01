@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import { Home } from './components/Home';
+import React, {Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
 import { Account } from './components/Account';
 import { Login } from './components/Login';
 import { NoMatch } from './components/NoMatch';
@@ -10,17 +10,18 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <BrowserRouter>
           <Switch>
-            <Router exact path="/" component={Home} />
-            <Router path="/login" component={Account} />
-            <Router path="/account" component={Login} />
-            <Router component={NoMatch} />
+            <Route exact path="/home" component={Home} />
+            <Route path="/login" component={Account} />
+            <Route path="/account" component={Login} />
+            <Route component={NoMatch} />
           </Switch>
-        </Router>
+        </BrowserRouter>
       </React.Fragment>
-    );
+    ); 
   }  
 }
+
 
 export default App;
