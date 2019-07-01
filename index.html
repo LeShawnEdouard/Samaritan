@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <div id="search-box-wrapper-wide" class="sidebar-version">
+                <form target="_self" action="/nonprofits/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+            
+              <h2>Search for a Nonprofit</h2>
+            
+              <div class="search-box">
+                <div class="small-label">Enter a nonprofit's name, a keyword, or city </div>
+                  <input type="text" name="q" id="q" value="" maxlength="105" class="text-input">
+                <div class="examples">Examples: <a href="/nonprofits/search?q=ProPublica">ProPublica</a>, <a href="/nonprofits/search?q=Research">Research</a> or <a href="/nonprofits/search?q=Minneapolis">Minneapolis</a></div>
+              </div>
+            
+              <div style="clear:both">
+                <div class="state label-holder">
+                  <label for="state">State</label>
+                  <select class="state-dropdown" name="state[id]" id="state_id"><option value="">Any State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AR">Arkansas</option>
+            <option value="AZ">Arizona</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IA">Iowa</option>
+            <option value="IN">Indiana</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+            <option value="AA">Armed Forces Americas</option>
+            <option value="AE">Armed Forces Europe</option>
+            <option value="AP">Armed Forces Pacific</option>
+            <option value="AS">America Samoa</option>
+            <option value="FM">Fed. States of Micronesia</option>
+            <option value="GU">Guam</option>
+            <option value="MH">Marshall Islands</option>
+            <option value="MP">Northern Mariana Islands</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="PW">Palau</option>
+            <option value="VI">Virgin Island</option>
+            <option value="ZZ">Outside U.S.</option></select>
+                </div>
+                <div class="ntee label-holder">
+                  <label for="ntee">Major nonprofit categories <a target="_blank" href="http://nccs.urban.org/classification/NTEE.cfm"><img class="info-button" src="https://static.propublica.org/assets/images/information.png" alt="Information"></a></label>
+                  <select name="ntee[id]" id="ntee_id"><option value="">Any Category</option>
+            <option value="1">Arts, Culture &amp; Humanities</option>
+            <option value="2">Education</option>
+            <option value="3">Environment and Animals</option>
+            <option value="4">Health</option>
+            <option value="5">Human Services</option>
+            <option value="6">International, Foreign Affairs</option>
+            <option value="7">Public, Societal Benefit</option>
+            <option value="8">Religion Related</option>
+            <option value="9">Mutual/Membership Benefit</option>
+            <option value="10">Unknown, Unclassified</option></select>
+                </div>
+                <div class="c_code label-holder">
+                  <label for="c_code">Org. Type <a href="/nonprofits/ctypes"><img class="info-button" src="https://static.propublica.org/assets/images/information.png" alt="Information"></a></label>
+                  <select name="c_code[id]" id="c_code_id"><option value="">Any Type</option>
+            <option value="2">501(c)(2)</option>
+            <option value="3">501(c)(3)</option>
+            <option value="4">501(c)(4)</option>
+            <option value="5">501(c)(5)</option>
+            <option value="6">501(c)(6)</option>
+            <option value="7">501(c)(7)</option>
+            <option value="8">501(c)(8)</option>
+            <option value="9">501(c)(9)</option>
+            <option value="10">501(c)(10)</option>
+            <option value="11">501(c)(11)</option>
+            <option value="12">501(c)(12)</option>
+            <option value="13">501(c)(13)</option>
+            <option value="14">501(c)(14)</option>
+            <option value="15">501(c)(15)</option>
+            <option value="16">501(c)(16)</option>
+            <option value="17">501(c)(17)</option>
+            <option value="18">501(c)(18)</option>
+            <option value="19">501(c)(19)</option>
+            <option value="21">501(c)(21)</option>
+            <option value="22">501(c)(22)</option>
+            <option value="23">501(c)(23)</option>
+            <option value="25">501(c)(25)</option>
+            <option value="26">501(c)(26)</option>
+            <option value="27">501(c)(27)</option>
+            <option value="28">501(c)(28)</option>
+            <option value="29">501(c)(29)</option>
+            <option value="92">4947(a)(1)</option></select>
+                </div>
+                  <input type="submit" value="Search" class="irs-btn-input" data-disable-with="Search">
+              </div>
+            
+                <div class="advanced-link bottom"><a href="/nonprofits/advanced_search">Advanced Search</a> 
+                    <a href="/nonprofits/name_search">People Search</a></div>  -->
+
+
+
+  <div class="container">
+    <h1>Non-Profit Search</h1>
+
+    <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+    <form id="movie-form">
+
+    <!-- charities will Get Dumped Here -->
+    <div id="buttons-view"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // Initial array of nonProfit
+      var nonProfit = ["Boobies Rock!", "Voice of a Child U.S.", "Community College Consortium on Autism and Intellectual Disabilities", "Juniata Community Mental Health Clinic"];
+
+      // displaycharInfo function re-renders the HTML to display the appropriate content
+      function displaycharInfo() {
+
+        var movie = $(this).attr("data-name");
+        // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+        var queryURL = "https://api.data.charitynavigator.org/v2/Organizations?app_id=c9d3a7e3&app_key=a1eab8e3f23bac67609bf0168595f301"
+
+        // Creating an AJAX call for the specific charity button being clicked
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+
+          // Creating a div to hold the Charity
+          var charityDiv = $("<div class='movie'>");
+
+          // Storing the charityName data
+          var charityName = response.Charity;
+
+          // Creating an element to have the charityName displayed
+          var pOne = $("<p>").text("charityName: " + charityName);
+
+          // Displaying the charityName
+          charityDiv.append(pOne);
+
+          // Storing the release year
+          var charityNavigatorURL = response.charityNavigatorURL;
+
+          // Creating an element to hold the URL
+          var pTwo = $("<p>").text("charityNavigatorURL: " + charityNavigatorURL);
+
+          // Displaying the URL year
+          charityDiv.append(pTwo);
+
+          // Storing the mailingAddress
+          var mailingAddress = response.mailingAddress;
+
+          // Creating an element to hold the mailingAddress
+          var pThree = $("<p>").text("mailingAddress: " + mailingAddress);
+
+          // Appending the mailingAddress
+          charityDiv.append(pThree);
+
+          //below if we can get an image, if not we can add a default image
+        // [
+          // Retrieving the URL for the image
+        //   var imgURL = response.Poster;
+
+          // Creating an element to hold the image
+        //   var image = $("<img>").attr("src", imgURL);
+
+          // Appending the image
+        //   charityDiv.append(image); ] 
+
+          $("#buttons-view").prepend(charityDiv);
+        });
+
+      }
+
+      // Function for displaying nonprofit data
+      function renderButtons() {
+
+        // Deleting the nonProfit prior to adding new nonProfit
+        // (this is necessary otherwise you will have repeat buttons)
+        $("#buttons-view").empty();
+
+        // Looping through the array of nonProfit
+        for (var i = 0; i < nonProfit.length; i++) {
+
+          // Then dynamicaly generating buttons for each NP in the array
+          // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+          var a = $("<button>");
+          // Adding a class of charity-btn to our button
+          a.addClass("charity-btn");
+          // Adding a data-attribute
+          a.attr("data-name", nonProfit[i]);
+          // Providing the initial button text
+          a.text(nonProfit[i]);
+          // Adding the button to the buttons-view div
+          $("#buttons-view").append(a);
+        }
+      }
+
+      // This function handles events where a button is clicked
+      $("#add-charity").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var char = $("#charity-input").val().trim();
+
+        // Adding movie from the textbox to our array
+        nonProfit.push(char);
+
+        // Calling renderButtons which handles the processing of our charity array
+        renderButtons();
+      });
+
+      // Adding a click event listener to all elements with a class of "charity-btn"
+      $(document).on("click", ".charity-btn", displaycharInfo);
+
+      // Calling the renderButtons function to display the intial buttons
+      renderButtons();
+    </script>
+  </div>
+</body>
+
+</html>
+
+
+
+</form>
+  </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+var queryURL = "https://api.data.charitynavigator.org/v2/Organizations?app_id=c9d3a7e3&app_key=a1eab8e3f23bac67609bf0168595f301";
+
+$.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    });
+
+
+   </script> 
+
+</body>
+</html> -->
