@@ -4,12 +4,14 @@ import Home from './components/Home';
 import { Account } from './components/Account';
 import { Login } from './components/Login';
 import { NoMatch } from './components/NoMatch';
+
 import Navbar from './components/NavTab';
 // import './App.css';
 
 class App extends Component {
   render() {
     return (
+
       <div>
         <Navbar></Navbar>
         <React.Fragment>
@@ -23,9 +25,11 @@ class App extends Component {
           </BrowserRouter>
         </React.Fragment>
       </div>
+
     ); 
   }  
 }
 
 
 export default App;
+
