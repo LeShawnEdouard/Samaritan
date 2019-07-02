@@ -13,8 +13,8 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/home" component={Home} />
-            <Route path="/login" component={Account} />
-            <Route path="/account" component={Login} />
+            <Route path="/account" component={Account} />
+            <Route path="/login" component={Login} />
             <Route component={NoMatch} />
           </Switch>
         </BrowserRouter>
@@ -25,3 +25,8 @@ class App extends Component {
 
 
 export default App;
+// Collapse
+
+
+
+
