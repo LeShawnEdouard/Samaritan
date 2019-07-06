@@ -17,9 +17,10 @@ class App extends Component {
         <React.Fragment>
           <BrowserRouter>
             <Switch>
+              <Route exact path="/" component={Home} />
               <Route exact path="/home" component={Home} />
-              <Route path="/Volunteer" component={Volunteer} />
-              <Route path="/login" component={Login} />
+              <Route exact path="/Volunteer" component={Volunteer} />
+              <Route exact path="/login" component={Login} />
               <Route component={NoMatch} />
             </Switch>
           </BrowserRouter>
