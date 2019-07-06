@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import { Account } from './components/Account';
+import { Volunteer } from './components/Volunteer';
 import { Login } from './components/Login';
 import { NoMatch } from './components/NoMatch';
 
@@ -18,7 +18,7 @@ class App extends Component {
           <BrowserRouter>
             <Switch>
               <Route exact path="/home" component={Home} />
-              <Route path="/account" component={Account} />
+              <Route path="/Volunteer" component={Volunteer} />
               <Route path="/login" component={Login} />
               <Route component={NoMatch} />
             </Switch>
