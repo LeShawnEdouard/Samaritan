@@ -1,11 +1,11 @@
-/* .hero {
+.vol {
     height: 500px;
     background-size: cover;
     background-position: center;
     position: relative;
   }
   
-  .hero::after {
+  .vol::after {
     content: "";
     display: block;
     opacity: .4;
@@ -17,18 +17,17 @@
     background: black;
   }
   
-  .hero * {
+  .vol * {
     position: relative;
     z-index: 2;
   }
   
-  .hero h1, .hero h2 {
+  .vol h1, .vol h2 {
     color: white;
   }
   
-  .hero h1 {
+  .vol h1 {
     font-size: 60px;
     padding-top: 140px;
     margin-top: 0;
   }
-   */
