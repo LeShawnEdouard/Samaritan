@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 // import { Container, Row, Col } from 'reactstrap';
 // import { URLSearchParams } from 'url';
+// import "./volunteer.css";
 
 
 class Volunteer extends React.Component {
@@ -50,7 +51,7 @@ class Volunteer extends React.Component {
                 <div key={user.charityName}>
                   <p>{user.charityName}</p>
                   <div>
-                  <a onClick={user.charityNavigatorURL} style={{cursor: 'pointer'}}>click me!</a>
+                  <a href={user.charityNavigatorURL} onClick={this.handleClick}>click me!</a>
                      {/* <p>{user.charityNavigatorURL}</p> */}
                   </div>
                   <p>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</p>
