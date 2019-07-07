@@ -3,8 +3,10 @@ import React from 'react';
 import axios from 'axios';
 // import { Container, Row, Col } from 'reactstrap';
 // import { URLSearchParams } from 'url';
-// import "./volunteer.css";
-
+import Hero from '../components/Hero';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 class Volunteer extends React.Component {
   state = {
@@ -38,12 +40,16 @@ class Volunteer extends React.Component {
     return (
     <div>
       <div>
-      <h2>Volunteer Page</h2>
       {/* <Calendar /> */}
        </div>
   
       <React.Fragment>
-        <h2>Non-Profit List</h2>
+<div>
+        <Container>
+          <Row>
+          <Col size="md-6">
+
+        <h3>Non-Profit List</h3>
         <div>
           { this.state.users ? (
             this.state.users.map(user => {
@@ -58,10 +64,17 @@ class Volunteer extends React.Component {
                 </div>
               );
             })
-          ) : (
+          ) : 
+          (
             <p>Loading...</p>
           )}
         </div>
+
+        </Col>
+        </Row>
+        </Container>
+        </div>
+
       </React.Fragment>
 
       </div>
