@@ -1,11 +1,21 @@
 import React from 'react';
 // import Calendar from 'react-calendar';
 import axios from 'axios';
-// import { Container, Row, Col } from 'reactstrap';
+// import Individual from '../pages/Individual';
 // import { URLSearchParams } from 'url';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
+
+
+
+
+
 
 
 class Volunteer extends React.Component {
+
+
   state = {
     users: [],
     isLoading: true,
@@ -50,7 +60,8 @@ class Volunteer extends React.Component {
                 <div key={user.charityName}>
                   <p>{user.charityName}</p>
                   <div>
-                  <a onClick={user.charityNavigatorURL} style={{cursor: 'pointer'}}>click me!</a>
+                  {/* <a onClick={user.charityNavigatorURL} style={{cursor: 'pointer'}}>click me!</a> */}
+                  <a href={user.charityNavigatorURL} onClick={this.handleClick}>click me!</a>
                      {/* <p>{user.charityNavigatorURL}</p> */}
                   </div>
                   <p>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</p>
