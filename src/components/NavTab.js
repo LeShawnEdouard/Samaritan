@@ -12,11 +12,6 @@ export const NavTab = () => (
       <Nav className="mr-auto">
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link href="#link">Login</Nav.Link>
-        <li className="nav-item">
-        <div className="fb-login-button" 
-        // onClick={this.loginFB()} 
-        data-width="" data-size="medium" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
-        </li>
 
       </Nav>
       <Nav>
