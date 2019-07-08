@@ -9,10 +9,6 @@ function Home() {
   return (
     <div>
       <Hero backgroundImage="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-<<<<<<< Updated upstream
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
-=======
         <h1>Good Samaritans</h1>
         <h2>We Are In This Together</h2>
         <br></br>
@@ -32,7 +28,6 @@ function Home() {
         </Col>
         </Row>
         </Container>
->>>>>>> Stashed changes
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
