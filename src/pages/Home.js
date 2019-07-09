@@ -19,7 +19,9 @@ function Home() {
           <Col size="md-6">
         <div>
         {/* <h2>Sign-In To Volunteer!</h2> */}
-          <Button variant="light">Volunteer</Button></div>
+          <Button variant="light" div className="fb-login-button" 
+        // onClick={this.loginFB()} 
+        data-width="" data-size="" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true">Volunteer</Button></div>
         </Col>
         <Col size="md-6">
         <div>
