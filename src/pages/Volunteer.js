@@ -3,10 +3,10 @@ import React from 'react';
 import axios from 'axios';
 // import { Container, Row, Col } from 'reactstrap';
 // import { URLSearchParams } from 'url';
-import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+
 
 class Volunteer extends React.Component {
   state = {
@@ -71,6 +71,10 @@ class Volunteer extends React.Component {
         </div>
 
         </Col>
+        <Col size="md-6">
+
+</Col>
+
         </Row>
         </Container>
         </div>
