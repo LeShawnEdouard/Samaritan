@@ -6,7 +6,6 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Plugin from './Plugin.html';
 
 
 class Volunteer extends React.Component {
@@ -74,8 +73,8 @@ class Volunteer extends React.Component {
         </Col>
         <Col size="md-6">
 
-<Plugin></Plugin>
 </Col>
+
         </Row>
         </Container>
         </div>
