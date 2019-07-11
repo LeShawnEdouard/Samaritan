@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-<<<<<<< Updated upstream
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
