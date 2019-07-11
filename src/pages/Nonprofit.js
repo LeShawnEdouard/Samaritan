@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 function Nonprofit() {
   return (
     <div>
-      <Hero backgroundImage="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+      <Hero backgroundImage="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
         <h1>Welcome Back!</h1>
         <h2>Post an event or send an alert to your local volunteers!</h2>
         <br></br>
@@ -19,14 +19,13 @@ function Nonprofit() {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Join Us Today!</h1>
           </Col>
         </Row>
         <Row>
-          <Col size="sm-6">
+          <Col size="sm-3">
             <p>
 
-              <h1>Bulletin Board Here</h1>
+              <h1>Create Event</h1>
               <Form>
               <Form.Group controlId="formBasicEmail">
               <Form.Label>Event Name</Form.Label>
@@ -66,7 +65,30 @@ function Nonprofit() {
             </Form>
             </p>
             </Col>
-            <Col size="sm-6">
+            <Col size="sm-3">
+            <h3>Event Display Here</h3>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+            </Col>
+            <Col size="sm-3">
             <p>
               <h1>Texting App Here</h1>
             </p>
