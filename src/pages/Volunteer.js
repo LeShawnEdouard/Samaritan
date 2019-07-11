@@ -72,8 +72,11 @@ class Volunteer extends React.Component {
 
         </Col>
         <Col size="md-6">
+        
+              <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
+        
 
-</Col>
+        </Col>
 
         </Row>
         </Container>
