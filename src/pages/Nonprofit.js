@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+<<<<<<< Updated upstream
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -25,7 +26,8 @@ function Nonprofit() {
         <Row>
           <Col size="sm-6">
             <p>
-              <h1>Bulliten Board Here</h1>
+
+              <h1>Bulletin Board Here</h1>
               <Form>
               <Form.Group controlId="formBasicEmail">
               <Form.Label>Event Name</Form.Label>
