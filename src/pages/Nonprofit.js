@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 function Nonprofit() {
   return (
     <div>
-      <Hero backgroundImage="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+      <Hero backgroundImage="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
         <h1>Welcome Back!</h1>
         <h2>Post an event or send an alert to your local volunteers!</h2>
         <br></br>
