@@ -99,6 +99,8 @@ class Volunteer extends React.Component {
             Location <br></br>
             Time<br></br>
           </p>
+
+          <button type="button" class="btn btn-primary btn-lg">Event Text Opt-In!</button>
             </Col>
         <Col size="md-4">
         

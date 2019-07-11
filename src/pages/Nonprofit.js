@@ -90,7 +90,7 @@ function Nonprofit() {
             </Col>
             <Col size="sm-3">
             <p>
-              <h1>Texting App Here</h1>
+            <button type="button" class="btn btn-primary btn-lg">Text an Event!</button>
             </p>
           </Col>
         </Row>
