@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-<<<<<<< Updated upstream
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -20,14 +19,13 @@ function Nonprofit() {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Join Us Today!</h1>
           </Col>
         </Row>
         <Row>
-          <Col size="sm-6">
+          <Col size="sm-3">
             <p>
 
-              <h1>Bulletin Board Here</h1>
+              <h1>Create Event</h1>
               <Form>
               <Form.Group controlId="formBasicEmail">
               <Form.Label>Event Name</Form.Label>
@@ -67,7 +65,30 @@ function Nonprofit() {
             </Form>
             </p>
             </Col>
-            <Col size="sm-6">
+            <Col size="sm-3">
+            <h3>Event Display Here</h3>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+          <p>
+            Event <br></br>
+            Location <br></br>
+            Time<br></br>
+          </p>
+            </Col>
+            <Col size="sm-3">
             <p>
               <h1>Texting App Here</h1>
             </p>
