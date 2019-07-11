@@ -3,7 +3,9 @@ import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+<<<<<<< Updated upstream
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 function Nonprofit() {
@@ -24,7 +26,45 @@ function Nonprofit() {
         <Row>
           <Col size="sm-6">
             <p>
-              <h1>Bulliten Board Here</h1>
+
+              <h1>Bulletin Board Here</h1>
+              <Form>
+              <Form.Group controlId="formBasicEmail">
+              <Form.Label>Event Name</Form.Label>
+              <Form.Control type="email" placeholder="Enter event" />
+              <Form.Text className="text-muted">
+              </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicEmail">
+              <Form.Label>Host/Company</Form.Label>
+              <Form.Control type="email" placeholder="Enter host" />
+              <Form.Text className="text-muted">
+              </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicEmail">
+              <Form.Label>Time of Event</Form.Label>
+              <Form.Control type="email" placeholder="Enter time" />
+              <Form.Text className="text-muted">
+              </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicEmail">
+              <Form.Label>Location</Form.Label>
+              <Form.Control type="email" placeholder="Enter location" />
+              <Form.Text className="text-muted">
+              </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Tell us more about your event!</Form.Label>
+              <Form.Control as="textarea" rows="3" />
+              </Form.Group>
+              <Button variant="primary" type="submit">
+              Submit
+              </Button>
+            </Form>
             </p>
             </Col>
             <Col size="sm-6">
