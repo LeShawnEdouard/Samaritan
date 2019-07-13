@@ -8,12 +8,30 @@ import Form from 'react-bootstrap/Form';
 
 class Nonprofit extends Component {
   state ={
-    nonprofits: []
+    nonprofits: [],
+    eventName: "",
+    eventHost: "",
+    eventTime: "",
+    eventLocation: "",
+    eventAbout: ""
   };
 
   componentDidMount(){
 
   };
+
+  createEvent = () => {
+    console.log("create event working" );
+  };
+
+  handleInputChange = event => {
+		const { name, value } = event.target;
+		this.setState({
+			[name]: value
+	},		console.log(this.state)
+  );
+};
+
 
 // function Nonprofit() {
   render(){
@@ -36,39 +54,46 @@ class Nonprofit extends Component {
 
               <h1>Create Event</h1>
               <Form>
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail" 
+              onChange={this.handleInputChange}>
               <Form.Label>Event Name</Form.Label>
-              <Form.Control type="email" placeholder="Enter event" />
+              <Form.Control type="email" placeholder="Enter event" name= "eventName"/>
               <Form.Text className="text-muted">
               </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail"
+              onChange={this.handleInputChange}>
               <Form.Label>Host/Company</Form.Label>
-              <Form.Control type="email" placeholder="Enter host" />
+              <Form.Control type="email" placeholder="Enter host" name= "eventHost"/>
               <Form.Text className="text-muted">
               </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail"
+              onChange={this.handleInputChange}>
               <Form.Label>Time of Event</Form.Label>
-              <Form.Control type="email" placeholder="Enter time" />
+              <Form.Control type="email" placeholder="Enter time" name= "eventTime"/>
               <Form.Text className="text-muted">
               </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail"
+              
+              onChange={this.handleInputChange}>
               <Form.Label>Location</Form.Label>
-              <Form.Control type="email" placeholder="Enter location" />
+              <Form.Control type="email" placeholder="Enter location" name= "eventLocation"/>
               <Form.Text className="text-muted">
               </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Group controlId="exampleForm.ControlTextarea1"
+              
+              onChange={this.handleInputChange}>
               <Form.Label>Tell us more about your event!</Form.Label>
-              <Form.Control as="textarea" rows="3" />
+              <Form.Control as="textarea" rows="3" name= "eventAbout"/>
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button variant="primary" onClick={() => this.createEvent()}>
               Submit
               </Button>
             </Form>
