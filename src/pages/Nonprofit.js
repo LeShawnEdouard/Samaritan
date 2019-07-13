@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Hero from '../components/Hero';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,8 +6,17 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+class Nonprofit extends Component {
+  state ={
+    nonprofits: []
+  };
 
-function Nonprofit() {
+  componentDidMount(){
+
+  };
+
+// function Nonprofit() {
+  render(){
   return (
     <div>
       <Hero backgroundImage="https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
@@ -97,6 +106,6 @@ function Nonprofit() {
       </Container>
     </div>
   );
-}
+}}
     
     export default Nonprofit;
