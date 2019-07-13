@@ -7,16 +7,17 @@ import { NoMatch } from './pages/NoMatch';
 import Nonprofit from './pages/Nonprofit';
 
 import Navbar from './components/NavTab';
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
 
       <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <React.Fragment>
           <BrowserRouter>
+          <Navbar></Navbar>
             <Switch>
               <Route exact path="/home" component={Home} />
               <Route exact path="/Volunteer" component={Volunteer} />
