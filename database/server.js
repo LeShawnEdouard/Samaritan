@@ -8,12 +8,15 @@ var connection = mysql.createConnection({
   password: "Forever21!",
   database: "events"
 
-});connection.connect(function(err) {
+});
+connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
   }
   comingUp();
 });
+
+
 
 function comingUp() {
   connection.query("SELECT * FROM comingUp", function(err, res) {
@@ -70,7 +73,4 @@ function charityOptions(comingUp) {
           }
         );
       });
-  
-
-
 }

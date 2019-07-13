@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import API from '../utils/API';
 
 class Nonprofit extends Component {
   state ={
@@ -17,19 +18,43 @@ class Nonprofit extends Component {
   };
 
   componentDidMount(){
+    this.loadEvents();
+  };
 
+  loadEvents = () => {
+    API.getEvents()
+    // .then(res =>
+    //   console.log(res)
+    // )
+    // .catch( err => console.log(err))
   };
 
   createEvent = () => {
     console.log("create event working" );
+    // app.post('/', function(req, res){
+    //   connection.query(
+    //     "INSERT INTO ComingUp SET ?",
+    //     {
+    //       event_name: this.state.eventName,
+    //       event_time: this.state.eventTime,
+    //       event_location: this.state.eventLocation,
+    //       event_about: this.state.eventAbout
+    //     },
+    //     function(err) {
+    //       if (err) throw err;
+    //       console.log("Your event was created successfully!");
+    //     }
+    //   );
+  
+    // })
+
   };
 
   handleInputChange = event => {
 		const { name, value } = event.target;
 		this.setState({
 			[name]: value
-	},		console.log(this.state)
-  );
+	});
 };
 
 
