@@ -17,3 +17,8 @@ a {
 .nav-link {
   font-size: 20px;
 }
+
+.scroll-table {
+  overflow: auto;
+  height: 600px;
+}
