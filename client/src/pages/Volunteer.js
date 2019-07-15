@@ -5,22 +5,32 @@ import axios from 'axios';
 // import { URLSearchParams } from 'url';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
+// import './smsform.css';
 import Container from 'react-bootstrap/Container';
-<<<<<<< HEAD:client/src/pages/Volunteer.js
-// import API from '../utils/API';
-=======
-import Table from 'react-bootstrap/Table';
->>>>>>> master:src/pages/Volunteer.js
 
-
+// import sendMessage from "../send_sms"
 
 class Volunteer extends React.Component {
   state = {
+    message: {
+      to: '',
+      body: ''
+    },
+    submitting: false,
+    error: false,
     users: [],
     isLoading: true,
     errors: null
   };
 
+  componentDidMount() {
+    this.getUsers();
+  }
 
   getUsers = () => {
     console.log("sanity check");
@@ -38,8 +48,49 @@ class Volunteer extends React.Component {
       })
   }
 
-  componentDidMount() {
-    this.getUsers();
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.setState({ submitting: true });
+    axios.post('/api/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.message)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          this.setState({
+            error: false,
+            submitting: false,
+            message: {
+              to: '',
+              body: ''
+            }
+          });
+        } else {
+          this.setState({
+            error: true,
+            submitting: false
+          });
+        }
+      });
+  }
+
+  onHandleChange = (event) => {
+    const name = event.target.getAttribute('name');
+    this.setState({
+      message: { ...this.state.message, [name]: event.target.value }
+    });
+  }
+
+  handleClose = () => {
+    this.setState({ show: false });
+  }
+
+  handleShow = () => {
+    this.setState({ show: true });
   }
 
   render() {
@@ -105,46 +156,52 @@ class Volunteer extends React.Component {
             Time<br></br>
           </p>
 
-          <button type="button" class="btn btn-primary btn-lg">Event Text Opt-In!</button>
+          <button type="button" className="btn btn-primary btn-lg" onClick={this.handleShow}>Event Text Opt-In!</button>
+          <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+                <form
+                onSubmit={this.onSubmit}
+                className={this.state.error ? 'error sms-form' : 'sms-form'}>
+            <div>
+              <label htmlFor="to">To:</label>
+              <input
+                  type="tel"
+                  name="to"
+                  id="to"
+                  value={this.state.message.to}
+                  onChange={this.onHandleChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="body">Body:</label>
+              <textarea name="body" id="body"
+              value={this.state.message.body}
+              onChange={this.onHandleChange}/>
+            </div>
+            <button type="submit">
+              Send message
+            </button>
+          </form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={this.handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
             </Col>
         <Col size="md-4">
         
-              <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
+              <div className="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
         
 
-        </Col>
-        <Col>
-        <div>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </Table>
-        </div>
         </Col>
 
         </Row>
@@ -159,5 +216,3 @@ class Volunteer extends React.Component {
 }
 
   export default Volunteer;
-
-
