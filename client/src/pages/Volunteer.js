@@ -1,5 +1,4 @@
 import React from 'react';
-// import Calendar from 'react-calendar';
 import axios from 'axios';
 // import { Container, Row, Col } from 'reactstrap';
 // import { URLSearchParams } from 'url';
@@ -8,12 +7,11 @@ import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
-
 // import './smsform.css';
 import Container from 'react-bootstrap/Container';
-
 // import sendMessage from "../send_sms"
+import Hero from '../components/Hero';
+
 
 class Volunteer extends React.Component {
   state = {
@@ -98,32 +96,37 @@ class Volunteer extends React.Component {
     <div>
   
       <React.Fragment>
+      <Hero backgroundImage="https://images.unsplash.com/photo-1487687944474-d9cf58dda287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80">
+
+      </Hero>
 <div>
   
         <Container>
           <Row>
           <Col size="md-4">
-
+           <br></br>
         <h4>Non-Profit List</h4>
         <br></br>
         <div>
           { this.state.users ? (
             this.state.users.map(user => {
               return (
+                <Container>
                 <h6>
                 <div key={user.charityName}>
                   <p>{user.charityName}</p>
                   <p>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</p>
-
                   <div>
                   <a href={user.charityNavigatorURL} onClick={this.handleClick}>Learn More Here!</a>
                      {/* <p>{user.charityNavigatorURL}</p> */}
                   </div>
                   {/* <p>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</p> */}
                 </div>
+
                 <br></br>
                 <br></br>
                 </h6>
+                </Container>
               );
             })
           ) : 
@@ -134,27 +137,34 @@ class Volunteer extends React.Component {
 
         </Col>
         <Col size="md-4">
-          <h3>Event Display Here</h3>
+          <br></br>
+          <h4>Upcoming Events!</h4>
           <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
+            Event: 5K <br></br>
+            Location: 100 Martin Street Raleigh, NC <br></br>
+            Time 8:00 AM<br></br>
           </p>
           <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
+            Event: Clean The Water <br></br>
+            Location: Wilmington, NC <br></br>
+            Time: All Day August 1-3<br></br>
           </p>
           <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
+            Event: Rebuild  <br></br>
+            Location: Historic Oakwood <br></br>
+            Time: 9:00 AM<br></br>
           </p>
           <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
+            Event: Clean The Road <br></br>
+            Location: Highway 540 <br></br>
+            Time: 12 PM<br></br>
           </p>
+          <br></br>
+          <h5>
+            Opt in for text reminders on  <br></br>
+            upcoming volunteer oppurtunities.<br></br>
+            We can't wait to see you!<br></br>
+          </h5>
 
           <button type="button" className="btn btn-primary btn-lg" onClick={this.handleShow}>Event Text Opt-In!</button>
           <Modal show={this.state.show} onHide={this.handleClose}>
@@ -198,8 +208,8 @@ class Volunteer extends React.Component {
 
             </Col>
         <Col size="md-4">
-        
-              <div className="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
+        <br></br>
+              <div className="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
         
 
         </Col>
