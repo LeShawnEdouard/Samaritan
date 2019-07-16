@@ -5,9 +5,12 @@
 module.exports=function(connection, router){
     router.get('/events', function(req, res){
         connection.query('SELECT * FROM comingUp', function (err, data){
-            (err)?res.send(err):res.json({comingUp:data});
-            console.log(data)
-            res.send(JSON.stringify(data));
+            if (err) {
+              res.send(err)
+            }
+            else {
+              res.json({comingUp:data});
+            }
         })
     });
 
