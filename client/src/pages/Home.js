@@ -5,15 +5,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-<<<<<<< HEAD
 import Scrape from "../components/scrape";
 import { Link } from 'react-router-dom';
 import Volunteer  from './Volunteer';
 import Nonprofit from './Nonprofit';
-=======
 // import Image from 'react-bootstrap/Image';
 // import Scrape from "../components/scrape";
->>>>>>> master
+
 
 
 
@@ -51,16 +49,10 @@ import Nonprofit from './Nonprofit';
         </Col>
         <Col size="md-6">
         <div>
-<<<<<<< HEAD
           <Button variant="light" >Non-Profit</Button></div>
-=======
 
      
 
-
-        <Button variant="light">Non-Profit</Button> 
-          </div>
->>>>>>> master
         </Col>
         </Row>
         </Container>
