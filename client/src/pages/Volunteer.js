@@ -1,17 +1,20 @@
 import React from 'react';
+// import Calendar from 'react-calendar';
 import axios from 'axios';
 // import { Container, Row, Col } from 'reactstrap';
 // import { URLSearchParams } from 'url';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
+import Hero from '../components/Hero';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container'
 // import './smsform.css';
-// import sendMessage from "../send_sms"
-import Hero from '../components/Hero';
-import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+
+
+// import sendMessage from "../send_sms"import Table from 'react-bootstrap/Table';
 import '../App.css';
 
 
@@ -26,6 +29,7 @@ class Volunteer extends React.Component {
     users: [],
     isLoading: true,
     errors: null
+
   };
 
   componentDidMount() {
@@ -92,7 +96,6 @@ class Volunteer extends React.Component {
   handleShow = () => {
     this.setState({ show: true });
   }
-
   render() {
     return (
       <Container>
@@ -214,4 +217,5 @@ class Volunteer extends React.Component {
 }
 
 export default Volunteer;
+
 
