@@ -22,6 +22,7 @@ class Nonprofit extends Component {
 
   loadEvents = () => {
     fetch("/api/events").then(res => console.log(res.json))
+    
     //API.getEvents()
     // .then(res =>
     //   console.log(res)

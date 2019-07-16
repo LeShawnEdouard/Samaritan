@@ -27,6 +27,10 @@ function NavTab(props) {
       <Nav.Link>
         <Link to="/login" className={getClassName("/login")}>Login</Link>
       </Nav.Link>
+      <Nav.Link>
+        <Link to="/volunteer" className={getClassName("/volunteer")}>Volunteer</Link>
+      </Nav.Link>
+
       </Nav>
     </Navbar.Collapse>
     </Navbar>
