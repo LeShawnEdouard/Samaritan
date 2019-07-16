@@ -26,7 +26,12 @@ function Home() {
         </Col>
         <Col size="md-6">
         <div>
-          <Button variant="light">Non-Profit</Button></div>
+
+     
+
+
+        <Button variant="light">Non-Profit</Button> 
+          </div>
         </Col>
         </Row>
         </Container>

@@ -102,13 +102,13 @@ class Volunteer extends React.Component {
 
       </Hero>
           <Row>
-          <Col className="col-md-6">
+          <Col className="col-md-6 text-center">
             <br></br>
 
         <h4>Non-Profit List</h4>
         <br></br>
         <div className="scroll-table">
-        <Table striped bordered hover variant="dark" className="scroll-table">
+        <Table striped bordered hover variant="light" className="scroll-table">
           <thead>
             <tr>
               <th>Company Name</th>
@@ -135,10 +135,11 @@ class Volunteer extends React.Component {
         </div>
 
         </Col>
-        <Col className="col-md-3">
+        <Col className="col-md-3 text-center">
           <Row>
             <div>
-          <h3>Event Display Here</h3>
+              <br></br>
+          <h4>Event Display Here</h4>
           <p>
             Event <br></br>
             Location <br></br>
@@ -159,23 +160,22 @@ class Volunteer extends React.Component {
             Location <br></br>
             Time<br></br>
           </p>
+          <br></br>
           <button type="button" class="btn btn-primary btn-lg">Event Text Opt-In!</button>
+          <br></br>
           </div>
           </Row>
-          <Col className="col-md-3">
+          <Col className="col-md-3 text-center">
 
           <Row>
+            <br></br>
           <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="250px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
           </Row>
           </Col>
           </Col>
         </Row>
         </div>
-
-
-
     );
   }
 }
-
   export default Volunteer;
