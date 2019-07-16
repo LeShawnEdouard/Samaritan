@@ -1,8 +1,10 @@
 // import React, { Component } from "react";
 // // import "./style.css";
 // import Row from "react-bootstrap/Row";
-import axios from "axios";
-import cheerio from "cheerio";
+
+// import axios from "axios";
+// import cheerio from "cheerio";
+
 // import Table from "react-bootstrap/Table";
 
 // class Scrape extends Component {
@@ -73,28 +75,3 @@ import cheerio from "cheerio";
 //   }
 // }
 
-//   export default Scrape;
-
-// Grab the articles as a json
-const url = "https://www.nhl.com";
-
-axios.get(url)
-.then(response => {
-    console.log(response.data);
-})
-.catch(error => {
-    console.log(error);
-})
-
-let getData = html => {
-    data = [];
-    const $ = cheerio.load(html);
-    $('table.itemlist tr td:nth-child(3)').each((i, elem)=>{
-        data.push({
-            title : $(elem).text(),
-            link : $(elem).find('a.storylink').attr('herf')
-        });
-    });
-    console.log(data);
-}
-getData(response.data)
