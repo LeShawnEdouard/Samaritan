@@ -1,8 +1,10 @@
 // import React, { Component } from "react";
 // // import "./style.css";
 // import Row from "react-bootstrap/Row";
+
 // import axios from "axios";
 // import cheerio from "cheerio";
+
 // import Table from "react-bootstrap/Table";
 
 // class Scrape extends Component {
@@ -73,4 +75,3 @@
 //   }
 // }
 
-//   export default Scrape;
