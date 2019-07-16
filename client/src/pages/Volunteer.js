@@ -98,15 +98,21 @@ class Volunteer extends React.Component {
   }
   render() {
     return (
-      <Container>
+      <div>
+        <Hero backgroundImage="https://images.unsplash.com/photo-1487687944474-d9cf58dda287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80" data-width="100%">
+        <br></br>
+        <br></br>
+        </Hero>
+      <Container style={{ marginTop: 30 }}>
         <Row>
-          <Col>
-            <Hero backgroundImage="https://images.unsplash.com/photo-1487687944474-d9cf58dda287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80" data-width="100%"/>
+          <Col size="md-12">
           </Col>
         </Row>
 
         <Row>
           <Col xs={12} sm={12} md={6} lg={6}>
+
+
             <h4>Non-Profit List</h4>
             <br></br>
             <div className="scroll-table">
@@ -120,8 +126,8 @@ class Volunteer extends React.Component {
               </thead>
               <tbody>
               {
-              this.state.users.map(user => {
-                return (
+                this.state.users.map(user => {
+                  return (
                     <tr>
                       <td key={user.charityName}>{user.charityName}</td>
                       <td key={user.mailingAddress.city}>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</td>
@@ -129,8 +135,8 @@ class Volunteer extends React.Component {
                     </tr>
                   )
                 }
-              )
-            }
+                )
+              }
             </tbody>
            </Table>
            </div>
@@ -183,7 +189,7 @@ class Volunteer extends React.Component {
                       id="to"
                       value={this.state.message.to}
                       onChange={this.onHandleChange}
-                  />
+                      />
                 </div>
                 <div>
                   <label htmlFor="body">Body:</label>
@@ -211,7 +217,8 @@ class Volunteer extends React.Component {
             <div className="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div> 
           </Col>
         </Row>
-      </Container>
+        </Container>
+      </div>
     );
   }
 }
