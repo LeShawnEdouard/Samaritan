@@ -30,6 +30,7 @@ class Nonprofit extends Component {
         this.setState({ events: data.comingUp });
         console.log("This is where we are!", data)
       })
+    
     //API.getEvents()
     // .then(res =>
     //   console.log(res)
