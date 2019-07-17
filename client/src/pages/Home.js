@@ -59,7 +59,7 @@ import Nonprofit from './Nonprofit';
   <Col xs={12} sm={12} md={5} lg={5}>
 <br></br> <br></br>
     {/* <img className="img-responsive" src={"../components/images/vol.jpg"} alt="logo"/> */}
-    <Hero backgroundImage="https://images.unsplash.com/photo-1480072723304-5021e468de85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80"> </Hero>
+    <Hero backgroundImage="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"> </Hero>
    <br></br><br></br>
     </Col>
   </Row>
