@@ -19,6 +19,8 @@
 // Dependencies
 
 const express = require("express");
+
+const bodyParser = require('body-parser');
 var mysql = require("mysql");
 var axios = require("axios");
 var cheerio = require("cheerio");
@@ -33,14 +35,23 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 var router = express.Router();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
+// var index = require ('../utils/API');
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 var connection = mysql.createConnection({
   host: "localhost",
   // port: 3306,
   user: "root",
-  password: "Forever21!",
+  password: "The1992vision",
   database: "events"
 
 });

@@ -10,6 +10,29 @@ import Navbar from './components/NavTab';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.handleInputChange.bind(this)
+    this.state = {
+      events: [],
+      nonprofits: [],
+      event_name: "",
+      event_host: "",
+      event_time: "",
+      event_location: "",
+      event_about: ""
+    }
+  }
+
+ 
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
   render() {
     return (
 

@@ -6,15 +6,20 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
+
+import Container from 'react-bootstrap/Container';
+
+
 import Hero from '../components/Hero';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 // import './smsform.css';
-import Container from 'react-bootstrap/Container';
+
 
 
 // import sendMessage from "../send_sms"import Table from 'react-bootstrap/Table';
+
 import '../App.css';
 
 
@@ -27,14 +32,36 @@ class Volunteer extends React.Component {
     submitting: false,
     error: false,
     users: [],
+    events: [],
     isLoading: true,
     errors: null
 
   };
 
   componentDidMount() {
+
+    this.loadEvents();
     this.getUsers();
+  };
+
+  loadEvents = () => {
+    fetch("/api/events")
+      .then(resp => resp.json())
+      .then((data) => {
+        console.log(data)
+        this.setState({ events: data.comingUp });
+        console.log("This is where we are!", data)
+      })
+    //API.getEvents()
+    // .then(res =>
+    //   console.log(res)
+    // )
+    // .catch( err => console.log(err))
+  };
+
+
   }
+
 
   getUsers = () => {
     console.log("sanity check");
@@ -51,6 +78,8 @@ class Volunteer extends React.Component {
         console.log(error)
       })
   }
+
+
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -82,14 +111,15 @@ class Volunteer extends React.Component {
       });
   }
 
+
   onHandleChange = (event) => {
     const name = event.target.getAttribute('name');
     this.setState({
       message: { ...this.state.message, [name]: event.target.value }
     });
   }
-
-  handleClose = () => {
+  
+    handleClose = () => {
     this.setState({ show: false });
   }
 
@@ -99,15 +129,79 @@ class Volunteer extends React.Component {
   render() {
     return (
       <div>
-        <Hero backgroundImage="https://images.unsplash.com/photo-1487687944474-d9cf58dda287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80" data-width="100%">
+          <Container>
+          <Row>
+          <Col className="col-md-8">
+        <Hero backgroundImage="https://images.unsplash.com/photo-1487687944474-d9cf58dda287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=732&q=80" data-width="100%" />
         <br></br>
-        <br></br>
-        </Hero>
-      <Container style={{ marginTop: 30 }}>
-        <Row>
-          <Col size="md-12">
+        <div className="scroll-table">
+        <Table striped bordered hover variant="dark" className="scroll-table">
+          <thead>
+            <tr>
+              <th>Company Name</th>
+              <th>Location</th>
+              <th>Learn More</th>
+            </tr>
+          </thead>
+          <tbody>
+          {
+            this.state.users.map(user => {
+              return (
+                  <tr>
+                    <td key={user.charityName}>{user.charityName}</td>
+                    <td key={user.mailingAddress.city}>{user.mailingAddress.city}, {user.mailingAddress.stateOrProvince}</td>
+                    <td key={user.charityName}><a href={user.charityNavigatorURL} onClick={this.handleClick}>Learn More Here!</a></td>
+                  </tr>
+                )
+              }
+            )
+          }
+                </tbody>
+              </Table>
+
+        </div>
+
+        </Col>
+        <Col className="col-md-4">
+          <Row>
+          <Col size="sm-3">
+            <Table striped bordered hover variant="dark" className="scroll-table">
+<thead>
+  <tr>
+    <th>Event</th>
+    <th>Host</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>About</th>
+  </tr>
+</thead>
+<tbody>
+{
+  this.state.events.map(item => {
+    return (
+        <tr>
+          <td key={item.event_name}>{item.event_name}</td>
+          <td key={item.event_host}>{item.event_host}</td>
+          <td key={item.event_time}>{item.event_time}</td>
+          <td key={item.event_location}>{item.event_location}</td>
+          <td data-width="250px" key={item.event_about}>{item.event_about}</td>
+        </tr>
+      )
+    }
+  )
+}
+      </tbody>
+    </Table>
+            </Col>
+          </Row>
+          <Row>
+          <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="400px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
+          </Row>
           </Col>
         </Row>
+        </Container>
+        </div>
+
 
         <Row>
           <Col xs={12} sm={12} md={6} lg={6}>
