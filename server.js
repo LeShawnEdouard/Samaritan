@@ -19,6 +19,8 @@
 // Dependencies
 
 const express = require("express");
+
+const bodyParser = require('body-parser');
 var mysql = require("mysql");
 var axios = require("axios");
 var cheerio = require("cheerio");
@@ -27,9 +29,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 var router = express.Router();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 // var index = require ('../utils/API');
 

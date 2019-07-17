@@ -20,5 +20,9 @@ a {
 
 .scroll-table {
   overflow: auto;
-  height: 600px;
+  height: 800px;
+}
+
+.event-display {
+  height: 500px;
 }

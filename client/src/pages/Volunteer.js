@@ -6,14 +6,37 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+
 import '../App.css';
 
 
 class Volunteer extends React.Component {
   state = {
     users: [],
+    events: [],
     isLoading: true,
     errors: null
+  };
+
+  componentDidMount() {
+    this.loadEvents();
+    this.getUsers();
+  };
+
+  loadEvents = () => {
+    fetch("/api/events")
+      .then(resp => resp.json())
+      .then((data) => {
+        console.log(data)
+        this.setState({ events: data.comingUp });
+        console.log("This is where we are!", data)
+      })
+    //API.getEvents()
+    // .then(res =>
+    //   console.log(res)
+    // )
+    // .catch( err => console.log(err))
   };
 
 
@@ -33,17 +56,14 @@ class Volunteer extends React.Component {
       })
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
 
   render() {
     return (
 
 <div>
-  
+          <Container>
           <Row>
-          <Col className="col-md-6">
+          <Col className="col-md-8">
 
         <h4>Non-Profit List</h4>
         <br></br>
@@ -75,38 +95,44 @@ class Volunteer extends React.Component {
         </div>
 
         </Col>
-        <Col className="col-md-6">
+        <Col className="col-md-4">
           <Row>
-            <div>
-          <h3>Event Display Here</h3>
-          <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
-          </p>
-          <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
-          </p>
-          <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
-          </p>
-          <p>
-            Event <br></br>
-            Location <br></br>
-            Time<br></br>
-          </p>
-          <button type="button" class="btn btn-primary btn-lg">Event Text Opt-In!</button>
-          </div>
+          <Col size="sm-3">
+            <Table striped bordered hover variant="dark" className="scroll-table">
+<thead>
+  <tr>
+    <th>Event</th>
+    <th>Host</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>About</th>
+  </tr>
+</thead>
+<tbody>
+{
+  this.state.events.map(item => {
+    return (
+        <tr>
+          <td key={item.event_name}>{item.event_name}</td>
+          <td key={item.event_host}>{item.event_host}</td>
+          <td key={item.event_time}>{item.event_time}</td>
+          <td key={item.event_location}>{item.event_location}</td>
+          <td data-width="250px" key={item.event_about}>{item.event_about}</td>
+        </tr>
+      )
+    }
+  )
+}
+      </tbody>
+    </Table>
+            </Col>
           </Row>
           <Row>
-          <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="250px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
+          <div class="fb-page" data-href="https://www.facebook.com/volunteer365/" data-tabs="timeline" data-width="" data-height="400px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/volunteer365/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/volunteer365/">Volunteering</a></blockquote></div>
           </Row>
           </Col>
         </Row>
+        </Container>
         </div>
 
 
