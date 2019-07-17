@@ -7,12 +7,16 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Scrape from "../components/scrape";
 import { Link } from 'react-router-dom';
-import Volunteer  from './Volunteer';
-import Nonprofit from './Nonprofit';
+// import Volunteer  from './Volunteer';
+// import Nonprofit from './Nonprofit';
 // import Image from 'react-bootstrap/Image';
 // import Scrape from "../components/scrape";
 
 
+// constructor(props) {
+//   super(props);
+//   this.props.history= this.props.history.bind(this);
+// };
 
 // class LoginLayout extends React.Component {
 //   constuctor() {
@@ -30,7 +34,7 @@ import Nonprofit from './Nonprofit';
 
 //   }};
 
-  function Home() {
+  function Home(props) {
   return (
     <div>
       <Hero backgroundImage="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
@@ -44,11 +48,14 @@ import Nonprofit from './Nonprofit';
         <div>
        
           <Button variant="light" div className="fb-login-button"
-        data-width="" data-size="" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" Link to={Volunteer}>Volunteer</Button></div>
+        data-width="" data-size="" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true" onClick={()=> props.history.push('/Volunteer')}>Volunteer</Button></div>
         </Col>
         <Col size="md-6">
         <div>
-          <Button variant="light" >Non-Profit</Button></div>
+          <Button variant="light" onClick={()=> props.history.push('/nonprofit')}>Non-Profit</Button></div>
+
+     
+
         </Col>
         </Row>
         </Container>
